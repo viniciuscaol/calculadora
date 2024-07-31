@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.0.0/math.min.js"></script> <!-- Adicionando math.js -->
+</head>
+<body>
+    <div class="container">
+        <div class="calculadora">
+            <form action="" name="calc_form">
+                <div class="display">
+                    <input type="text" name="display" id="display" readonly>
+                </div>
+                <div class="historico" id="historico">
+                    
+                </div>
+                <div>
+                    <hr>
+                    <input onclick="clearDisplay()" type="button" value="AC" class="operator">
+                    <input onclick="limparUltimoDigito()" type="button" value="DE" class="operator">
+                    <input onclick="pontoDecimal()" type="button" value="." class="operator">
+                    <input onclick="exibirNumero('/')" type="button" value="/" class="operator">
+                </div>
+                <div>
+                    <input onclick="exibirNumero('7')" type="button" value="7">
+                    <input onclick="exibirNumero('8')" type="button" value="8">
+                    <input onclick="exibirNumero('9')" type="button" value="9">
+                    <input onclick="exibirNumero('*')" type="button" value="*" class="operator">
+                </div>
+                <div>
+                    <input onclick="exibirNumero('4')" type="button" value="4">
+                    <input onclick="exibirNumero('5')" type="button" value="5">
+                    <input onclick="exibirNumero('6')" type="button" value="6">
+                    <input onclick="exibirNumero('-')" type="button" value="-" class="operator">
+                </div>
+                <div>
+                    <input onclick="exibirNumero('1')" type="button" value="1">
+                    <input onclick="exibirNumero('2')" type="button" value="2">
+                    <input onclick="exibirNumero('3')" type="button" value="3">
+                    <input onclick="exibirNumero('+')" type="button" value="+" class="operator">
+                </div>
+                <div>
+                    <input onclick="exibirNumero('00')" type="button" value="00">
+                    <input onclick="exibirNumero('0')" type="button" value="0">
+                    <input onclick="fazerConta()" type="button" value="=" class="operator">
+                    <input onclick="clearHistorico()" type="button" value="Limpar" id="limparhistorico">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

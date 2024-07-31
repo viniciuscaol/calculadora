@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: calculadora
+spec:
+  selector:
+    matchLabels:
+      app: calculadora
+  template:
+    metadata:
+      labels:
+        app: calculadora
+    spec:
+      containers:
+      - name: calculadora
+        image: viniciuscaol/calculadora:v{{TAG}}
+        ports:
+        - containerPort: 80
